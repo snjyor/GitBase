@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const postData = await getPostData(params.slug);
   return {
     title: `${postData.title}`,
-    description: postData.description || `Read about ${postData.title} on GitBase`,
+    description: postData.description || `${postData.title}`,
   };
 }
 
@@ -17,9 +17,9 @@ export default async function Post({ params }) {
     <article className="container mx-auto px-4 py-12 max-w-3xl">
       {/* Breadcrumb navigation */}
       <nav className="flex items-center text-sm text-gray-500 mb-6">
-        <Link href="/" className="hover:text-blue-600">Home</Link>
+        <Link href="/" className="hover:text-blue-600">首页</Link>
         <ChevronRight className="mx-2" size={16} />
-        <Link href="/posts" className="hover:text-blue-600">Articles</Link>
+        <Link href="/posts" className="hover:text-blue-600">文章</Link>
         <ChevronRight className="mx-2" size={16} />
         <span className="text-gray-900">{postData.title}</span>
       </nav>

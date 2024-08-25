@@ -2,16 +2,17 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Layout } from '@/components/Layout'
 import { Metadata } from 'next'
+import Sidebar from '../components/Sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 export const metadata: Metadata = {
   title: {
-    default: 'GitBase',
-    template: '%s | GitBase'
+    default: '一人景',
+    template: '%s | 一人景'
   },
-  description: 'Open source dynamic website without database, built with Next.js and GitHub API',
+  description: '用心记录每一段旅程',
 }
 
 interface RootLayoutProps {
@@ -22,7 +23,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout>{children}</Layout>
+        <div className="flex">
+          {/* <Sidebar /> */}
+          <main className="flex-1">
+            <Layout>{children}</Layout>
+          </main>
+        </div>
       </body>
     </html>
   )

@@ -71,22 +71,22 @@ export default function ArticleEditor() {
         name="title"
         value={article.title}
         onChange={handleInputChange}
-        placeholder="Article Title"
+        placeholder="文章标题"
       />
       <Input
         name="description"
         value={article.description}
         onChange={handleInputChange}
-        placeholder="Article Description"
+        placeholder="文章描述"
       />
       <Textarea
         name="content"
         value={article.content}
         onChange={handleInputChange}
-        placeholder="Article Content"
+        placeholder="文章内容"
         rows={20}
       />
-      <Button onClick={handleSave}>Save Article</Button>
+      <Button onClick={handleSave}>保存文章</Button>
     </div>
   );
 }

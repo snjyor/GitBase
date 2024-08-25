@@ -42,7 +42,7 @@ export default function ArticleEditorPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Edit Article</h1>
+      <h1 className="text-2xl font-bold mb-4">编辑文章</h1>
       <Suspense fallback={<div>Loading editor...</div>}>
         <ArticleEditor />
       </Suspense>
